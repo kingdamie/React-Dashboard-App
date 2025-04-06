@@ -13,10 +13,36 @@ A simple dashboard application built with React, TypeScript, React Router, and C
 
 ## 🛠️ Setup Instructions
 
-### 1. Clone the Repository
+### 1. Open your Terminal or Command Prompt.
+
+### 2. Navigate to the directory where you want to clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+cd path/to/your/directory
 ```
 
+### 3. Clone the Repository
+
+```bash
+git clone https://github.com/kingdamie/React-Dashboard-App.git
+```
+
+### 4. Navigate into the cloned repository 
+
+```bash
+cd repository
+```
+
+### 5. Install Dependencies
+
+```bash
+npm install
+```
+
+### 6. Start the Development Server
+
+```bash
+npm run dev
+```
+
+Open http://localhost:5173 in your browser to view the app
