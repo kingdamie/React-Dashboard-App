@@ -1,7 +1,9 @@
 import ThemeToggle from "../components/ThemeToggle";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import usePageMetadata from "../hooks/usePageMetadata";
 
 const Settings = () => {
+	usePageMetadata("Settings")
 	return (
 		<div className="space-y-6">
 			{/* Breadcrumb and Title */}

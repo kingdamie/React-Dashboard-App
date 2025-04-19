@@ -17,6 +17,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useTheme as useCustomTheme } from "../ThemeContext";
 import { IoMdPersonAdd } from "react-icons/io";
+import usePageMetadata from "../hooks/usePageMetadata";
 
 interface User {
 	id: number;
@@ -29,6 +30,7 @@ interface User {
 }
 
 const TableData = () => {
+	usePageMetadata('Table Data')
 	const [users, setUsers] = useState<User[]>([]); // state to manage users
 	const [search, setSearch] = useState(""); // state to manage search input
 	const [filter, setFilter] = useState("Random"); // state to manage filter setting default as Random

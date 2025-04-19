@@ -9,6 +9,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { GiCancel } from "react-icons/gi";
 import RecentJobsTable from "../components/RecentJobsTable";
 import BasicBars from "../components/BasicBars";
+import usePageMetadata from "../hooks/usePageMetadata";
 
 // Reusable Stat Card
 const StatCard = ({
@@ -27,6 +28,7 @@ const StatCard = ({
 	icon: JSX.Element;
 }) => {
 		const { theme } = useCustomTheme();
+		usePageMetadata("Dashoard with TS")
 	return (
 		<Paper
 			elevation={3}
