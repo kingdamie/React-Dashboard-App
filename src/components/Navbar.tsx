@@ -17,12 +17,15 @@ import SearchBar from "./SearchBar";
 import { useTheme as useCustomTheme } from "../ThemeContext";
 import { IoLogoXing } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+import routes from "../routes";
 
 interface NavbarProps {
 	toggleSidebar: () => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
+	const navigate = useNavigate();
 	const { theme } = useCustomTheme();
 	// Notification
 	const [notifAnchorEl, setNotifAnchorEl] = useState<null | HTMLElement>(null);
@@ -257,7 +260,10 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
 						{/* Menu Items with Hover Effect Based on Theme */}
 						<Box>
 							<MenuItem
-								onClick={handleProfileClose}
+								onClick={() => {
+									handleProfileClose();
+									navigate(routes.profile); // Adjust the path as needed
+								}}
 								sx={{
 									display: "flex",
 									alignItems: "center",
@@ -276,6 +282,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
 									display: "flex",
 									alignItems: "center",
 									gap: 1,
+									color: "red",
 									":hover": {
 										backgroundColor: theme === "light" ? "#f3f4f6" : "#202947", // Light hover vs dark hover
 									},
