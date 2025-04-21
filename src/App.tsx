@@ -7,6 +7,7 @@ import { ThemeProvider } from "./ThemeContext";
 import Layout from "./components/Layout";
 import routes from "./routes";
 import ScrollToTop from "./components/ScrollToTop";
+import { Profile } from "./pages/Profile";
 
 function App() {
 	return (
@@ -18,6 +19,7 @@ function App() {
 						<Route path={routes.dashoard} element={<Home />} />
 						<Route path={routes.setting} element={<Settings />} />
 						<Route path={routes.Datatable} element={<TableData />} />
+						<Route path={routes.profile} element={<Profile />} />
 					</Routes>
 				</Layout>
 			</Router>
